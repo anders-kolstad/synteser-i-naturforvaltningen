@@ -1,1 +1,35 @@
 # Trender i open forskning
+
+```{r setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+
+suppressPackageStartupMessages({
+require(europepmc)
+require(ggplot2)
+require(tidyverse)
+  })
+
+```
+
+Her ønsker jeg å se hvordan fremveksten av systematiske litteraturstudier har vært. Usikker på om dette søker bare tittler, eller om det tar med noen flere felt også.
+
+<!-- https://cran.r-project.org/web/packages/europepmc/vignettes/evergreenreviewgraphs.html -->
+
+```{r}
+sr2 <- europepmc::epmc_hits_trend('(systematic review) AND (PUB_TYPE:"Review" OR PUB_TYPE:"review-article")', 
+                                  synonym = FALSE, data_src = "med",
+                                  period = 1975:2022)
+```
+
+```{r sr-trend, fig.cap="Trend i andel publikasjoner kategorisert som review der ordene 'Systematic review' er brukt."}
+ggplot(sr2, aes(factor(year), query_hits / all_hits, group=1)) +
+  geom_line(size = 2, alpha = 0.8) +
+  theme_minimal()+
+  geom_point(size = 2) +
+  xlab("Year published") +
+  ylab("Proportion of articles in Europe PMC")+
+  scale_x_discrete(breaks = seq(min(sr2$year), max(sr2$year), by =5))
+```
+
+Omtrendt 4% av reviewer som publiseres i PubMed i 2022 inneholder ordene *Systamatic review*. Det er sannsynelig at det absolutte tallet er noe høyere, siden ikke alle vil bruke dette begrepet i tittelen, men trenden i figuren er nok representativ.
