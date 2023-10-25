@@ -1,0 +1,16 @@
+project: 
+  type: book
+book:
+  title: "Hvilke krav stiller norsk naturforvaltning til sine egne kunnskapssammenstillinger?"
+  chapters: 
+    - index.qmd
+    - trender.qmd
+
+output_dir: "docs"
+
+
+bibliography: book.bib
+
+format: 
+  html:
+    theme: cosmo
