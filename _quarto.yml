@@ -6,6 +6,7 @@ book:
     - index.qmd
     - trender.qmd
     - sokestrategi.qmd
+    - resultater.qmd
 
 output_dir: "docs"
 

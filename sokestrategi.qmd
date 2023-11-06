@@ -13,9 +13,11 @@ Det er også andre institusjoner i norske forvaltning som publiserer kunnskapssy
 Jeg ser kun på et fåtall av de nyeste publiskasjonene. Forhåpentligvis er dette nok til å gi et representativt bilde av hvordan kunnskapssynteser utarbides i norsk naturforvaltning i senere tid.
 
 For å bli med i analysen måtte en publikasjon inneholde en kunnskapssyntese.
-Denne syntese kunne være opplagt som en del av rapportens hovedformål, eller den kunne ligge sjult som en konklusjon i et annet type arbeid, eksempelvis en narrativ kunnskapssammenstilling.
+Denne syntese kunne være opplagt som en del av rapportens hovedformål, eller den kunne ligge skjult som en konklusjon i et annet type arbeid, eksempelvis en narrativ kunnskapssammenstilling.
+Kunnskapssyntesen må være av den kvantitative sorten, eller at den kunne vært av den kvantitative sorten.
+Kvalitative synteser har også kvalitetskrav, men de er ikke like som de som settes for kvantitative synteser og analyser. 
 
-Publikasjonene ble først filtrer etter innholdet i tittelen.
+Publikasjonene ble først filtrert etter innholdet i tittelen.
 Der jeg trodde det kunne foreligge en kunnskapssyntese gikk jeg videre til å lete opp den fulle teksten for å bekrefte eller avkrefte dette.
 Publikasjoner som gikk gjennom begge disse to filtrene ble lest og kodet, dvs, jeg ekstraherte forhåndsbetsemt informasjon.
 
