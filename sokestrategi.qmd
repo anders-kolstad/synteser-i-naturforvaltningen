@@ -1,0 +1,35 @@
+# Søkestrategi og Kriterier for inkludering
+
+For å svare på [spørsmålet](#spm) vil jeg gå gjenneom Miljødirektoratets M-serie. Dette er Miljødirektoratets egen rapporteringsserie. Alle deres egne publikasjoner og oppdragsrapporter får et slikt M-nummer.
+Listen over publiskasjoner i M-serien skal i utgangspunktet ligge [her](https://www.miljodirektoratet.no/publikasjoner/), men en sjekk viste at det ikke stemte. 
+Jeg fikk derfor oversent en oversikt over alle M-nummrene, med publikasjonstitler, fra direktoratet, tilbake til 2019.
+M-nummrene er ikke helt kronologiske.
+Trolig tildeles nummrene et stund før publikasasjonen utgis.
+Men siden jeg ikke har publiseringsdata i den samme oversikten velger jeg å gå gjennom denne listen _kronologisk_ fra høyt til lavt M-nummer.
+Dette gjør jeg til jeg har 10 rapporter der Miljødirektoratet selv er utgiver, og 10 rapporter som er bestillt av direktoratet (såkalte oppdragsrapporter).
+
+Denne analysen fokuserer kun på Miljødirektoratet.
+Det er også andre institusjoner i norske forvaltning som publiserer kunnskapssynteser med relevans for natur, men disse er ikke vurdert i dette arbeidet.
+Jeg ser kun på et fåtall av de nyeste publiskasjonene. Forhåpentligvis er dette nok til å gi et representativt bilde av hvordan kunnskapssynteser utarbides i norsk naturforvaltning i senere tid.
+
+For å bli med i analysen måtte en publikasjon inneholde en kunnskapssyntese.
+Denne syntese kunne være opplagt som en del av rapportens hovedformål, eller den kunne ligge sjult som en konklusjon i et annet type arbeid, eksempelvis en narrativ kunnskapssammenstilling.
+
+Publikasjonene ble først filtrer etter innholdet i tittelen.
+Der jeg trodde det kunne foreligge en kunnskapssyntese gikk jeg videre til å lete opp den fulle teksten for å bekrefte eller avkrefte dette.
+Publikasjoner som gikk gjennom begge disse to filtrene ble lest og kodet, dvs, jeg ekstraherte forhåndsbetsemt informasjon.
+
+Denne informasjonen var:
+
+- Inneholder publikasjonen et tydelig spørsmål som skal besvares?
+- Er spørsmålet smalt nok og mulig å belyse ved å innhente all relevant forskning, elelr et tilfeldig utvalg av denne forskningen?
+
+I tilleg ser jeg etter graden av oppfyllelsen for disse utvalgte punktene fra [standarden til systematiske kunnskapssynteser](https://environmentalevidence.org/standards-table/) publisert av Collaboration for Environmental Evidence (CEE) (CEE standard code i parentes):
+
+- Bredt søk (flere databaser, inkl grå litteratur) (2.2)
+- Søketermer gjengitt (2.7)
+- Tydelige kriterier for inkludering (3.1)
+- Publiserte lister over brukte kilder (separat fra annen tekst i rapporten) (3.8)
+- Kritisk vurdering (critical appraisal) av studier som inngår (5.1)
+- Begrunnelse for å eventuelt ikke å gjøre en meta-analyse (6.2)
+- Har vote counting blitt brukt? (også 6.2)

@@ -5,6 +5,7 @@ book:
   chapters: 
     - index.qmd
     - trender.qmd
+    - sokestrategi.qmd
 
 output_dir: "docs"
 

@@ -1,35 +1,46 @@
-# Trender i open forskning
+# Forskningsfronten innen kunnskapssammenstillinger
 
-```{r setup, include=FALSE}
-library(knitr)
-knitr::opts_chunk$set(echo = TRUE)
+ 
+Det å oppsummere kunnskap og eventuelt også sette sammen eksisterende kunnskap for å komme med nye konklusjoner (syntese) er et fagfelt i seg selv.
+Der det tidligere var kun en narrativ litteraturstudie er det nå i økende grad systematiske litteraturstudier som gjelder. 
 
-suppressPackageStartupMessages({
-require(europepmc)
-require(ggplot2)
-require(tidyverse)
-  })
+@fig-srtrend illustrerer fremveksten av systematiske litteraturstudier i form av andel publikasjoner som inneholnder termene _Sytematic review_ eller _Systematic map_.
 
-```
-
-Her ønsker jeg å se hvordan fremveksten av systematiske litteraturstudier har vært. Usikker på om dette søker bare tittler, eller om det tar med noen flere felt også.
+<!-- Her søker jeg _all fields_ (dvs titler, nøkkelord, abstract, full text, alt). -->
 
 <!-- https://cran.r-project.org/web/packages/europepmc/vignettes/evergreenreviewgraphs.html -->
 
-```{r}
-sr2 <- europepmc::epmc_hits_trend('(systematic review) AND (PUB_TYPE:"Review" OR PUB_TYPE:"review-article")', 
+```{r, eval=FALSE}
+sr <- europepmc::epmc_hits_trend('(systematic review) AND (PUB_TYPE:"Review" OR PUB_TYPE:"review-article")', 
                                   synonym = FALSE, data_src = "med",
-                                  period = 1975:2022)
+                                  period = 1975:2022) %>%
+  add_column("Search_term" = "Systematic review")
+
+sm <- europepmc::epmc_hits_trend('(systematic map) AND (PUB_TYPE:"Review" OR PUB_TYPE:"review-article")', 
+                                  synonym = FALSE, data_src = "med",
+                                  period = 1975:2022) %>%
+  add_column("Search_term" = "Systematic map")
+
+hits <- rbind(sr, sm) %>%
+  mutate(Search_term = factor(Search_term))
 ```
 
-```{r sr-trend, fig.cap="Trend i andel publikasjoner kategorisert som review der ordene 'Systematic review' er brukt."}
-ggplot(sr2, aes(factor(year), query_hits / all_hits, group=1)) +
+```{r , eval=F}
+ggplot(hits, aes(factor(year), query_hits / all_hits, group=Search_term, colour = Search_term)) +
   geom_line(size = 2, alpha = 0.8) +
   theme_minimal()+
   geom_point(size = 2) +
   xlab("Year published") +
   ylab("Proportion of articles in Europe PMC")+
-  scale_x_discrete(breaks = seq(min(sr2$year), max(sr2$year), by =5))
+  scale_x_discrete(breaks = seq(min(sr$year), max(sr$year), by =5))
+ggsave("figures/sr-trends.jpg")
+```
+
+```{r, echo=FALSE}
+#| label: fig-srtrend 
+#| fig-cap: Trend i andel publikasjoner kategorisert som review der ordene Systematic review er brukt.
+
+knitr::include_graphics("figures/sr-trends.jpg")
 ```
 
 Omtrendt 4% av reviewer som publiseres i PubMed i 2022 inneholder ordene *Systamatic review*. Det er sannsynelig at det absolutte tallet er noe høyere, siden ikke alle vil bruke dette begrepet i tittelen, men trenden i figuren er nok representativ.

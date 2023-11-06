@@ -1,5 +1,5 @@
---- 
-title: "Introduksjon"
+---
+title: "Forskningsspørsmålet"
 author: "Anders Kolstad"
 date: "`r Sys.Date()`"
 site: bookdown::bookdown_site
@@ -9,7 +9,38 @@ biblio-style: apalike
 csl: chicago-fullnote-bibliography.csl
 ---
 
-# Hvilke krav stiller norsk naturforvaltning til sine egne kunnskapssammenstillinger?
+```{r  setup, include=FALSE}
+library(knitr)
+knitr::opts_chunk$set(echo = TRUE)
+
+suppressPackageStartupMessages({
+require(europepmc)
+require(ggplot2)
+require(tidyverse)
+  })
+
+```
+
+# Hvilke krav stiller norsk naturforvaltning til sine egne kunnskapssynteser? {#spm}
 
 På denne nettsiden går jeg gjennom de analysene jeg har gjort for å svare på spørsmålet i tittelen.
 
+Opphavet til spørmålet er et ønske om å bekrefte eller avkrefte en følselse jeg har om at kunnskapssammenstillinger produsert eller bestillt av miljøforvaltningen (Miljødirektoratet, often på oppdrag fra KLD) har lavere kvalitet enn hva man bør kunne forvente. Om dette stemmer så kan det skyldes flere ting, blant annet korte tidsfrister eller manglende kunnskap om fagfeltet. Dette er ting man kan velge å rette på. Konsekvense derimot, om denne følsesen beror på sannhet, er mer alvorlige, siden konklusjoner som nås i synteser publisert av eller via staten ofte får stor betydning for praktisk forvaltning.
+
+::: callout-note
+## Viktige begreper
+
+**Kunnskapssyntese** det norske begrepet jeg bruker for det som på engelsk kalles *evidence synthesis*. Målet med en slik syntese er å svare på konkrete spørsmål, eksempelvis *hva er virkningen av en gitt type inngrep eller annen påvirkning på naturen*? Å svare på et slik spørsmål krever data, og som ellers i forskningne så er det viktig at dataene er skaffet på riktig måte, eksempelvis gjennom tilfeldige utvalg. Metoden for å skaffe dataene må også beskrives slik at arbeidet er etterprøvbart. Dataene i en kunnskapssyntese er gjerne annen publisert litteratur. Derfra kan man hente ut kvalitative eller kvantitative effekttstørrelser. En kunnskapssyntese basert på andre publiserte studier, som følger visse minstkrav over om etterprøvbarhet og fornuftig utvalg av studier, kan sier å være en **systematisk litterturstudie (SLS).** Det er ulike standarder for SLS'er som representerer ulik grad av kvalitet. Baksiden av kvalitet i denne sammenhengen er ofte at det tar lengre tid å for eksmepel følge den øverte **gull standarden**. Men en SLS kan også gjennomføres raskt, og det er egne standarder for raske SLS'er (rapid reviews).
+
+En **meta-analyse** er en kvantitativ analyse der dataene som inngår i analysen er effektstørrelsene som er rapportert i andre publiserte studier. En meta-analyse beror derfor på en SLS for å skaffe data.
+
+En ***vanlig*** **litteraturstudie** derimot, trenger ikke inneholde en syntese, men kan være en slags oppsummering av et større eller mindre tema. En slik studie trenger ikke nødvendigvis være systematisk, med mindre den søker å svare på konkrete spørsmål som den opprinnelige forskningen handler om. En **narrativ litteraturstudie** en ren tekstlig oppsumering av en litteraturstudie (dvs uten meta-analyse). En **kunnskapssammenstilling** er et vagt begrep som kan men ikke må inneholde en litteraturstudie, men ofte brukes begrepet synonymt med kunnskapssyntese.
+:::
+
+Det er flere typer kunnskapssammenstillinger, og de samme krevene gjeler ikke alle typene. For eksmepel er det noen ganger ønskelig med en sammenstilling av *bakgrunnsinformasjon* som belyser et helt fagfelt eller en hel tematikk. Da kan det være hensiktsmessig med en vanlig narrativ litteraturanalyse. Ønsker man istedet å svare på helt konkrete spørsmål , som for eksmempel av typen *hva funker* når det gjelder ulike tiltak for å bevare eller sikre naturverdier, da er saken en helt annen. Et slikt spørsmål krever et mer bevist forhold til innhentingen av bavis for å sikre at konklusjonene baserer seg på og reflekterer bredden av forksning som er gjort på dette spørsmålet. Forsøker man å svare på denne typen konkrete spørsmål med en vanlig narrativ litteraturanalyse vil man ikke ha noen kontroll på hvor stor den subjektive påvirkningen blir. Det samme gjelder om man i ett og samme arbeid stiller for mange eller for brede spørsmål av typen *hva funker*. Da blir det rett og slett ikke mulig å innhente og sammenstille all den relevante forksningen som må vurderes, og man havner i en posisjon hvor man må velge hvilken forskning man skal stole mest på.
+
+Helt konkret så ønsker jeg i dette arbeidet å se på i hvor stor grad Mdir oppfyller standarden til CEE for en SLS.
+
+Hensikte er IKKE å påstå at forvaltningen skal eller bør ta sikte på å oppnå gullstandarden for kunnskapssyntese. Den lista er ganske høy. Hensikten er heller IKKE å sammenligne Mdir med andre kunnskapsframstillere - jeg vet at andre grupper eller institusjoner også kan ha svakheter og gjøre feil. Men som skrevet over, så har staten et spesielt ansvar for redelighet og kvalitet.
+
+Hensikten er derimot å peke på opplagte svakheter ved måten kunnskapsssammenstillinger gjøres i naturforvaltningen i dag, slik at vi kan lære og bli bedre. Dette gir meg samtidig muligheten til å drive opplysning om fordelene med en systematisk tilnærming til slik type syntesearbeid, og til slutt vil jeg komkludere at det er ingen grunn, noen gang, å lage en kunnskapssammenstilling uten at den gjøres systematisk.
