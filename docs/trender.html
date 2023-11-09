@@ -190,6 +190,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- Her søker jeg _all fields_ (dvs titler, nøkkelord, abstract, full text, alt). -->
 <!-- https://cran.r-project.org/web/packages/europepmc/vignettes/evergreenreviewgraphs.html -->
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>sr <span class="ot">&lt;-</span> europepmc<span class="sc">::</span><span class="fu">epmc_hits_trend</span>(<span class="st">'(systematic review) AND (PUB_TYPE:"Review" OR PUB_TYPE:"review-article")'</span>, </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">synonym =</span> <span class="cn">FALSE</span>, <span class="at">data_src =</span> <span class="st">"med"</span>,</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>                                  <span class="at">period =</span> <span class="dv">1975</span><span class="sc">:</span><span class="dv">2022</span>) <span class="sc">%&gt;%</span></span>
@@ -202,8 +204,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>hits <span class="ot">&lt;-</span> <span class="fu">rbind</span>(sr, sm) <span class="sc">%&gt;%</span></span>
 <span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Search_term =</span> <span class="fu">factor</span>(Search_term))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
+<details>
+<summary>Code</summary>
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(hits, <span class="fu">aes</span>(<span class="fu">factor</span>(year), query_hits <span class="sc">/</span> all_hits, <span class="at">group=</span>Search_term, <span class="at">colour =</span> Search_term)) <span class="sc">+</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.8</span>) <span class="sc">+</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()<span class="sc">+</span></span>
@@ -212,6 +217,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylab</span>(<span class="st">"Proportion of articles in Europe PMC"</span>)<span class="sc">+</span></span>
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_discrete</span>(<span class="at">breaks =</span> <span class="fu">seq</span>(<span class="fu">min</span>(sr<span class="sc">$</span>year), <span class="fu">max</span>(sr<span class="sc">$</span>year), <span class="at">by =</span><span class="dv">5</span>))</span>
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">ggsave</span>(<span class="st">"figures/sr-trends.jpg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</details>
 </div>
 <div class="cell">
 <div class="cell-output-display">
