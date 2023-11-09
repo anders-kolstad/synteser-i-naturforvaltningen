@@ -16,3 +16,5 @@ bibliography: book.bib
 format: 
   html:
     theme: cosmo
+    code-fold: true
+    code-summary: "Show the code"
